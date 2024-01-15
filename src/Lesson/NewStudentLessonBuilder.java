@@ -11,8 +11,7 @@ public class NewStudentLessonBuilder extends LessonBuilder{
         return this;
     }
     @Override
-    public LessonBuilder getLesson(String title) {
-        this.lesson = new Lesson();
+    public LessonBuilder setTitle(String title) {
         this.lesson.name = title;
         return this;
     }

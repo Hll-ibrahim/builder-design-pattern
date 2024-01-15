@@ -10,7 +10,7 @@ public class OldStudentBuilder extends LessonBuilder{
         return this;
     }
     @Override
-    public LessonBuilder getLesson(String title) {
+    public LessonBuilder setTitle(String title) {
         this.lesson = new Lesson();
         this.lesson.name = title;
         return this;

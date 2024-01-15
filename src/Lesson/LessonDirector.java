@@ -5,9 +5,7 @@ public class LessonDirector {
     public LessonDirector(LessonBuilder lessonBuilder){
         this.lessonBuilder = lessonBuilder;
     }
-    public void Make(){
-        lessonBuilder.getLesson("title");
-        lessonBuilder.applyDiscount(0.5);
-        lessonBuilder.addLessonNote("note");
+    public Lesson MakeNewStudent(String title,double price,String note) {
+        return lessonBuilder.setTitle(title).setPrice(price).applyDiscount(0.5).addLessonNote(note).getResult();
     }
 }
