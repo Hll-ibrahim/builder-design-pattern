@@ -1,121 +1,88 @@
 public class EvBuilder {
-    private String mahalle;
-    private String ilce;
-    private String sehir;
+    private Ev ev;
 
-    private int Yili;
-    private int odaSayisi;
-    private int banyoSayisi;
-    private int salonSayisi;
-    private int balkonSayisi;
-    private int tuvaletSayisi;
-
-    private boolean isDoublex;
-    private boolean isEsyali;
-    private boolean hasOtopark;
-    private boolean hasCocukParki;
-    private boolean hasKlima;
-    private boolean hasHavuz;
-
+    public EvBuilder(){
+        this.ev = new Ev();
+    }
     public static EvBuilder startBuild(){
         return new EvBuilder();
     }
 
     public Ev build(){
-        Ev ev = new Ev();
-
-        ev.setSehir(sehir);
-        ev.setIlce(ilce);
-        ev.setMahalle(mahalle);
-
-        ev.setYili(Yili);
-        ev.setTuvaletSayisi(tuvaletSayisi);
-        ev.setOdaSayisi(odaSayisi);
-        ev.setBalkonSayisi(balkonSayisi);
-        ev.setBanyoSayisi(banyoSayisi);
-
-        ev.setEsyali(isEsyali);
-        ev.setDoublex(isDoublex);
-        ev.setHasHavuz(hasHavuz);
-        ev.setHasCocukParki(hasCocukParki);
-        ev.setHasOtopark(hasOtopark);
-        ev.setHasKlima(hasKlima);
-
-        return ev;
+        return this.ev;
     }
-
     public EvBuilder setMahalle(String mahalle) {
-        this.mahalle = mahalle;
+        this.ev.setMahalle(mahalle);
         return this;
     }
 
     public EvBuilder setIlce(String ilce) {
-        this.ilce = ilce;
+        this.ev.setIlce(ilce);
         return this;
     }
 
     public EvBuilder setSehir(String sehir) {
-        this.sehir = sehir;
+        this.ev.setSehir(sehir);
         return this;
     }
 
     public EvBuilder setYili(int yili) {
-        Yili = yili;
+        this.ev.setYili(yili);
         return this;}
 
 
     public EvBuilder setOdaSayisi(int odaSayisi) {
-        this.odaSayisi = odaSayisi;
+        this.ev.setOdaSayisi(odaSayisi);
         return this;
     }
 
     public EvBuilder setBanyoSayisi(int banyoSayisi) {
-        this.banyoSayisi = banyoSayisi;
+        this.ev.setBanyoSayisi(banyoSayisi);
         return this;
     }
 
     public EvBuilder setSalonSayisi(int salonSayisi) {
-        this.salonSayisi = salonSayisi;
+        this.ev.setSalonSayisi(salonSayisi);
         return this;
     }
 
     public EvBuilder setBalkonSayisi(int balkonSayisi) {
-        this.balkonSayisi = balkonSayisi;
+        this.ev.setBalkonSayisi(balkonSayisi);
         return this;
     }
 
     public EvBuilder setTuvaletSayisi(int tuvaletSayisi) {
-        this.tuvaletSayisi = tuvaletSayisi;
+        this.ev.setTuvaletSayisi(tuvaletSayisi);
         return this;
     }
 
     public EvBuilder setDoublex(boolean doublex) {
-        isDoublex = doublex;
+        this.ev.setDoublex(doublex);
         return this;
     }
 
     public EvBuilder setEsyali(boolean esyali) {
-        isEsyali = esyali;
+        this.ev.setEsyali(esyali);
         return this;
     }
 
     public EvBuilder setHasOtopark(boolean hasOtopark) {
-        this.hasOtopark = hasOtopark;
+        this.ev.setHasOtopark(hasOtopark);
         return this;
     }
 
     public EvBuilder setHasCocukParki(boolean hasCocukParki) {
-        this.hasCocukParki = hasCocukParki;
+        this.ev.setHasCocukParki(hasCocukParki);
         return this;
     }
 
     public EvBuilder setHasKlima(boolean hasKlima) {
-        this.hasKlima = hasKlima;
+        this.setHasKlima(hasKlima);
         return this;
     }
 
     public EvBuilder setHasHavuz(boolean hasHavuz) {
-        this.hasHavuz = hasHavuz;
+        this.setHasHavuz(hasHavuz);
         return this;
     }
 }
